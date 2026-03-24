@@ -1,7 +1,5 @@
-let filme = JSON.parse(localStorage.getItem("filmes"))
 
-
-const filmes = filme || [
+export const filmes = [
     {
         nome: "O Poderoso Chefão",
         diretor: "Francis Ford Coppola",
@@ -37,4 +35,8 @@ const filmes = filme || [
         genero: "Drama, Romance",
         id: 4
     }
+
+    
+
+
 ]

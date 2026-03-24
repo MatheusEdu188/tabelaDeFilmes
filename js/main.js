@@ -1,9 +1,9 @@
-let filmes = JSON.parse(localStorage.getItem("filmes"));
+import { filmes } from "./filmes.js";
 
+let filme = JSON.parse(localStorage.getItem("filmes"))
 
 
 const table = document.getElementById("table");
-const td = document.querySelector("td");
 
 
 
@@ -17,7 +17,7 @@ function createTable() {
     `
 
 
-    filmes.forEach((fil)=>{
+    filme.forEach((fil)=>{
         const tr = document.createElement("tr");
         tr.dataset.id = fil.id;
         tr.innerHTML = `
@@ -48,11 +48,11 @@ table.addEventListener("click", (event)=>{
 
     const indice = filmes.findIndex(f => f.id === idd);
 
-    filmes.splice(indice,1);
+    filme.splice(indice,1);
 
     
     
-    localStorage.setItem("filmes", JSON.stringify(filmes))
+    localStorage.setItem("filmes", JSON.stringify(filme))
     createTable()
     
 
